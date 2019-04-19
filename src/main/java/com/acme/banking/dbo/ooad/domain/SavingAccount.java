@@ -5,4 +5,12 @@ public class SavingAccount extends Account {
     public SavingAccount(double amount) {
         super(amount, 0);
     }
+
+    @Override
+    public String toString() {
+        return "SavingAccount{" +
+                "amount=" + amount +
+                ", overdraft=" + overdraft +
+                '}';
+    }
 }

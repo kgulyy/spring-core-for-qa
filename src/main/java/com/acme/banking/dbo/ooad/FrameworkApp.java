@@ -16,6 +16,6 @@ public class FrameworkApp {
 
         final Collection<Account> accounts = reportingService.getAllAccountsInUsd();
 
-        accounts.forEach(a -> System.out.println(a.getAmount() + " " + a.getOverdraft()));
+        accounts.forEach(System.out::println);
     }
 }
