@@ -1,7 +1,7 @@
 package com.acme.banking.dbo.ooad;
 
 import com.acme.banking.dbo.ooad.domain.Account;
-import com.acme.banking.dbo.ooad.domain.PredefinedAccountRepository;
+import com.acme.banking.dbo.ooad.dao.PredefinedAccountRepository;
 import com.acme.banking.dbo.ooad.service.NastolgieXchangeService;
 import com.acme.banking.dbo.ooad.service.ReportingService;
 

@@ -1,4 +1,8 @@
-package com.acme.banking.dbo.ooad.domain;
+package com.acme.banking.dbo.ooad.dao;
+
+import com.acme.banking.dbo.ooad.domain.Account;
+import com.acme.banking.dbo.ooad.domain.CheckingAccount;
+import com.acme.banking.dbo.ooad.domain.SavingAccount;
 
 import java.util.Arrays;
 import java.util.Collection;

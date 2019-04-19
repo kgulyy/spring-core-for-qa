@@ -1,7 +1,7 @@
 package com.acme.banking.dbo.ooad.service;
 
 import com.acme.banking.dbo.ooad.domain.Account;
-import com.acme.banking.dbo.ooad.domain.AccountRepository;
+import com.acme.banking.dbo.ooad.dao.AccountRepository;
 
 import java.util.Collection;
 
