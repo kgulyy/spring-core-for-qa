@@ -20,4 +20,8 @@ public abstract class Account {
     public double getOverdraft() {
         return overdraft;
     }
+
+    public void setOverdraft(double overdraft) {
+        this.overdraft = overdraft;
+    }
 }

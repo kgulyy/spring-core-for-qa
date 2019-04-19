@@ -18,7 +18,10 @@ public class ReportingService {
         final double xchangeRate = currencyService.getXchangeRate();
         final Collection<Account> accounts = repository.getAllAccounts();
 
-        accounts.forEach(account -> account.setAmount(account.getAmount() / xchangeRate));
+        accounts.forEach((account) -> {
+            account.setAmount(account.getAmount() / xchangeRate);
+            account.setOverdraft(account.getOverdraft() / xchangeRate);
+        });
 
         return accounts;
     }
