@@ -7,7 +7,7 @@ import com.acme.banking.dbo.ooad.domain.SavingAccount;
 import java.util.Arrays;
 import java.util.Collection;
 
-public class PredefinedAccountRepository implements AccountRepository {
+public class StubAccountRepository implements AccountRepository {
     private static final int AMOUNT_300 = 300;
     private static final int AMOUNT_600 = 600;
     private static final int AMOUNT_1200 = 1200;
