@@ -4,6 +4,7 @@ import com.acme.banking.dbo.ooad.domain.Account;
 import com.acme.banking.dbo.ooad.dao.AccountRepository;
 
 import java.util.Collection;
+import java.util.Collections;
 
 public class ReportingService {
     private CurrencyService currencyService;
@@ -23,6 +24,6 @@ public class ReportingService {
             account.setOverdraft(account.getOverdraft() / xchangeRate);
         });
 
-        return accounts;
+        return Collections.unmodifiableCollection(accounts);
     }
 }
