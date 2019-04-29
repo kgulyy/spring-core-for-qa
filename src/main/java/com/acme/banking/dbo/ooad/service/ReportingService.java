@@ -1,19 +1,19 @@
 package com.acme.banking.dbo.ooad.service;
 
-import com.acme.banking.dbo.ooad.domain.Account;
 import com.acme.banking.dbo.ooad.dao.AccountRepository;
+import com.acme.banking.dbo.ooad.domain.Account;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.Collections;
 
+@Service
 public class ReportingService {
+    @Autowired
     private CurrencyService currencyService;
+    @Autowired
     private AccountRepository repository;
-
-    public ReportingService(CurrencyService currencyService, AccountRepository repository) {
-        this.currencyService = currencyService;
-        this.repository = repository;
-    }
 
     public Collection<Account> getAllAccountsInUsd() {
         final double xchangeRate = currencyService.getXchangeRate();
