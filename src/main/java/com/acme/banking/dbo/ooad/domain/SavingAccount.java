@@ -8,9 +8,6 @@ public class SavingAccount extends Account {
 
     @Override
     public String toString() {
-        return "SavingAccount{" +
-                "amount=" + amount +
-                ", overdraft=" + overdraft +
-                '}';
+        return "SavingAccount{ " + super.toString() + " }";
     }
 }

@@ -1,8 +1,8 @@
 package com.acme.banking.dbo.ooad.domain;
 
 public abstract class Account {
-    protected double amount;
-    protected double overdraft;
+    private double amount;
+    private double overdraft;
 
     public Account(double amount, double overdraft) {
         this.amount = amount;
@@ -39,12 +39,15 @@ public abstract class Account {
 
     @Override
     public int hashCode() {
-        int result;
-        long temp;
-        temp = Double.doubleToLongBits(amount);
-        result = (int) (temp ^ (temp >>> 32));
+        long temp = Double.doubleToLongBits(amount);
+        int result = (int) (temp ^ (temp >>> 32));
         temp = Double.doubleToLongBits(overdraft);
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "amount=" + amount + ", overdraft=" + overdraft;
     }
 }
